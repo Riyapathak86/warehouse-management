@@ -61,7 +61,7 @@ console.log("order........................",order);
 
 
   return (
-    <div style={{marginLeft:"100px", backround:"red"}} >
+    <div  className="mt-5" style={{marginLeft:"100px", backround:"red"}} >
       <div className="w-100">
 
     <div className="bg-light container p-4 container" style={{ marginTop: "1px" }}>

@@ -26,7 +26,7 @@ import { useNavigate } from 'react-router';
   navigate("/loginpage")
   }
     return (
-      <div className="vh-100 vw-100 d-flex flex-column justify-content-center align-items-center">
+      <div className="vh-100 vw-100 d-flex flex-column justify-content-center align-items-center mt-5">
         
         <h3 className=" mb-4  Adminpanelheading">Register page</h3>
 

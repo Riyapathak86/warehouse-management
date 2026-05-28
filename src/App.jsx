@@ -17,7 +17,7 @@ const App = () => {
       <div >
         <Sidebar />
       </div>
-      <div className='mt-5'>
+      <div className='mt-6'>
         <Navbar />
     <Outlet />
   

@@ -12,7 +12,7 @@ const AdminDashboard = () => {
   const isChildRoute = location.pathname !== "/admindash"
 
   return (
-    <div>
+    <div className='mt-6'>
 
 
       <div 
