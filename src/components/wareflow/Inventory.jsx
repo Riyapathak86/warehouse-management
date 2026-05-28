@@ -1,10 +1,12 @@
 import React from "react";
-import Data from "./Data.jsx";
+// import Data from "./Data.jsx";
 import { useContext,useState } from "react";
 import Context from "../context/Context.jsx";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router-dom";
 const Inventory = () => {
-    const { InventoryData ,FilterData, setfilterData, searchitem} = useContext(Context)
+  const navigate = useNavigate();
+
+    const { InventoryData ,FilterData, setfilterData, searchitem,order, setorder} = useContext(Context)
 
 const handleFilter = (category) => {
   if (category === "All") {
@@ -23,13 +25,46 @@ const filtered = FilterData.filter((item) =>
   item.name.toLowerCase().includes(searchitem.toLowerCase())
 );
 
+// const AddToCart=(e)=>{
+// setorder(e)
+// // alert("plz login/register")
+//     navigate("loginpage")
+// }
+
+
+const AddToCart = (item) => {
+
+  setorder(item);
+
+  // alert("Please Login First");
+
+  navigate("/loginpage");
+};
+
+
+
+
+
+
+
+
+console.log("order........................",order);
+
+
+
+
+
+
+
+
+
 
 
   return (
-    <div style={{marginLeft:"100px "}} >
+    <div style={{marginLeft:"100px", backround:"red"}} >
       <div className="w-100">
 
-    <div className="bg-light container p-4 container" style={{ marginTop: "110px" }}>
+    <div className="bg-light container p-4 container" style={{ marginTop: "1px" }}>
       
           <div className="d-flex justify-content-between align-items-center flex-wrap mb-4 gap-3">
 
@@ -102,7 +137,9 @@ const filtered = FilterData.filter((item) =>
 
               <p className="card-text text-muted">{item.category}</p>
 
-              <button className="btn btn-primary w-100">
+              <button className="btn btn-primary w-100"
+              onClick={()=>AddToCart(item)}
+              >
                 Add to Cart
               </button>
             </div>

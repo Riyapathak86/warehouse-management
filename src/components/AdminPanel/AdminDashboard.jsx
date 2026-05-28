@@ -29,7 +29,7 @@ const AdminDashboard = () => {
       >
 
         <h4>Admin Dashboard</h4>
-
+<NavLink to="addproduct">addproduct</NavLink>
         <ul className="list-unstyled mt-4">
 
           <li className="my-4 d-flex align-items-center gap-2">

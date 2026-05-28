@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../../App";
-
+import AddProduct from "../AdminPanel/Adminsidebar/AddProduct";
 import Customer from '../wareflow/Customer';
 import Finance from '../wareflow/Finance';
 import Inventory from '../wareflow/Inventory';
@@ -19,7 +19,9 @@ import PriceList from "../AdminPanel/Adminsidebar/PriceList";
 import Reports from "../AdminPanel/Adminsidebar/Reports";
 import TotalStock from "../AdminPanel/Adminsidebar/TotalStock";
 import Pricecal from "../AdminPanel/Adminsidebar/Pricecal";
-
+import LoginPage from "../AdminPanel/LoginPage";
+import AboutUs from "../dashboard/AboutUs";
+import Shop from "../dashboard/Shop";
 const Router = createBrowserRouter([
   {
     path: '/',
@@ -38,7 +40,10 @@ const Router = createBrowserRouter([
       { path: 'tracking', element: <Tracking /> },
       { path: 'sidebar', element: <Sidebar /> },
       { path: 'adminlogin', element: <AdminLogin /> },
-
+      {path:'aboutus',element:<AboutUs/>},
+    {path:'loginpage',element: <LoginPage/>},
+         {path:'shop',element:<Shop/>},
+    
 
       {
         path: 'admindash',
@@ -47,12 +52,13 @@ const Router = createBrowserRouter([
           { path: 'painterDashboard', element: <PainterDashboard /> },
           { path: 'priceList', element: <PriceList /> },
 
-        
+    
           { path: 'pricecal/:id', element: <Pricecal /> },
 
           { path: 'reports', element: <Reports /> },
           { path: 'totalStock', element: <TotalStock /> },
           { path: 'orders', element: <Orders /> },
+            { path: 'addproduct', element: <AddProduct/> },
         ]
       }
 

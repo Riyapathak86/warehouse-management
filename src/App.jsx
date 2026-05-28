@@ -13,18 +13,12 @@ const App = () => {
 
   return (
     <>
-    <div className='d-flex'>
-      
+    <div>
       <div >
         <Sidebar />
       </div>
-
-      <div>
-        
+      <div className='mt-5'>
         <Navbar />
-
-
-
     <Outlet />
   
   </div>

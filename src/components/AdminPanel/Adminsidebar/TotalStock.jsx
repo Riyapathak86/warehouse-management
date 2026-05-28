@@ -43,10 +43,11 @@ setfilterData(filtered)
         <h4 className="text-success w-100 text-center">
           Total Units: 120
         </h4>
+        <div class="row">
 {FilterData.map((item)=>(
         <div
         key={item.id}
-          className="d-flex align-items-center gap-3 p-2 w-100"
+          className="col-md-4 mb-3 mx-3"
           style={{
             border: "2px solid #0D9488",
             borderRadius: "12px",
@@ -76,6 +77,7 @@ setfilterData(filtered)
    
 ))
 }
+</div>
     </div>
     </div>
   );

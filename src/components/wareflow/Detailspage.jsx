@@ -10,13 +10,21 @@ const Detailspage = () => {
   const product = InventoryData.find(
     (item) => item.id === Number(id)
   );
-
+  if (!product) {
+    return <h2 className="text-center mt-5">Loading...</h2>;
+  }
 
   const RelatedItems = InventoryData.filter(
     (item) =>
       item.category === product.category &&
       item.id !== product.id
   );
+const addToCart=()=>{
+  
+}
+
+
+
 
   return (
     <div className="container mt-5">
@@ -79,15 +87,15 @@ const Detailspage = () => {
 
           <div className="mt-3">
             <h5>Key Features</h5>
-            <ul>
-              {product.features.map((feature, index) => (
-                <li key={index}>{feature}</li>
-              ))}
-            </ul>
           </div>
 
           <div className="mt-4 d-flex gap-3">
-            <button className="btn btn-primary px-4">
+            <button className="btn btn-primary px-4"
+            
+            onClick={()=>{
+              addToCart(item)
+            }}
+            >
               Add to Cart
             </button>
 
@@ -142,3 +150,5 @@ const Detailspage = () => {
 };
 
 export default Detailspage;
+
+
