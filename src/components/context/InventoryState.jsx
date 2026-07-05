@@ -29,18 +29,21 @@ const [value,setvalue]= useState("")
 const [username, setUsername] = useState(
   localStorage.getItem("username") || ""  
 );
-  useEffect(() => {
-axios.get(`${import.meta.env.VITE_API_URL}/`)
-      .then(res => {
-        console.log("API DATA 👉", res.data)
+useEffect(() => {
+  console.log("API URL =", import.meta.env.VITE_API_URL);
 
-        setInventoryData(res.data)
-        setfilterData(res.data)
-      })
-      .catch(err => {
-        console.log("ERROR 👉", err)
-      })
-  }, [])
+  axios
+    .get(`${import.meta.env.VITE_API_URL}/`)
+    .then((res) => {
+      console.log("API DATA 👉", res.data);
+
+      setInventoryData(res.data);
+      setfilterData(res.data);
+    })
+    .catch((err) => {
+      console.log("ERROR 👉", err);
+    });
+}, []);
 
   return (
     <Context.Provider
