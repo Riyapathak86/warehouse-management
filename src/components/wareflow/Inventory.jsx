@@ -21,11 +21,18 @@ const handleFilter = (category) => {
 };
 
 
-const filtered = FilterData.filter((item) =>
+// const filtered = FilterData.filter((item) =>
 
-  item.name.toLowerCase().includes(searchitem.toLowerCase())
-);
-
+//   item.name.toLowerCase().includes(searchitem.toLowerCase())
+  
+// );
+const filtered = Array.isArray(FilterData)
+  ? FilterData.filter((item) =>
+      item.name.toLowerCase().includes(searchitem.toLowerCase())
+    )
+  : [];
+console.log(FilterData);
+console.log(Array.isArray(FilterData));
 const AddToCart = async (item) => {
 
   console.log("Button Clicked"); // 1
