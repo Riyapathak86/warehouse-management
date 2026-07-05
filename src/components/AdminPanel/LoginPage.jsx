@@ -31,7 +31,7 @@ const handleSubmit = async (e) => {
         password
       }
     )
-
+console.log("LOGIN URL:", `${import.meta.env.VITE_API_URL}/api/login`);
     console.log(res.data);
 
     setmsg(res.data.message);
