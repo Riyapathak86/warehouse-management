@@ -30,7 +30,7 @@ const [username, setUsername] = useState(
   localStorage.getItem("username") || ""  
 );
   useEffect(() => {
-    axios.get("http://localhost:3000/")
+axios.get(`${import.meta.env.VITE_API_URL}/`)
       .then(res => {
         console.log("API DATA 👉", res.data)
 

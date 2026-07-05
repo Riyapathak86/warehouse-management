@@ -15,7 +15,7 @@ const [showForm, setShowForm] = useState(false);
     const username = localStorage.getItem("username");
 
     const res = await axios.get(
-      `http://localhost:3000/api/cart/${username}`
+   `${import.meta.env.VITE_API_URL}/api/cart/${username}`
     );
 
     console.log(res.data);
@@ -49,7 +49,7 @@ console.log({
   try {
 
     const res = await axios.post(
-      "http://localhost:3000/api/placeorder",
+   `${import.meta.env.VITE_API_URL}/api/placeorder`,
       {
         username,
           fullName,
@@ -81,7 +81,7 @@ const removeItem = async (productId) => {
   try {
 
     const res = await axios.delete(
-      "http://localhost:3000/api/removefromcart",
+    `${import.meta.env.VITE_API_URL}/api/removefromcart`,
       {
         data: {
           username,

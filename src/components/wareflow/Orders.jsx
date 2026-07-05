@@ -10,7 +10,7 @@ const Orders = () => {
     try {
 
       const res = await axios.get(
-        "http://localhost:3000/api/orders"
+      `${import.meta.env.VITE_API_URL}/api/orders`
       );
 
       console.log(res.data);

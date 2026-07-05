@@ -14,35 +14,54 @@ description, setdescription,
 features, setfeatures,price, setprice}=useContext(Context)
 
 
+const submit = async (e) => {
+  e.preventDefault();
+
+  try {
+    const res = await axios.post(
+      `${import.meta.env.VITE_API_URL}/addproduct`,
+      {
+        productname,
+        category,
+        stockqty,
+        mrp,
+        image,
+        tagline,
+        description,
+        features,
+      }
+    );
+
+    console.log(res.data);
+
+    console.log("datas");
+    console.log(
+      productname,
+      category,
+      stockqty,
+      image,
+      tagline,
+      description,
+      features
+    );
+
+    setproductname("");
+    setcategory("");
+    setprice("");
+    setmrp("");
+    setstockqty("");
+    setimage("");
+    settagline("");
+    setdescription("");
+    setfeatures("");
+
+    alert("Product Added Successfully");
+  } catch (err) {
+    console.log(err);
+  }
+};
 
 
-
-
-const submit =(e)=>{
-    e.preventDefault()
-    axios.post("http://localhost:3000/addproduct",{
-
-productname,category,stockqty,mrp,image,tagline,description,features
-}
-)
-.then((res) => console.log(res.data))
-.catch((err) => console.log(err))
-
-  console.log("datas");
-console.log(productname,category,stockqty,image,tagline,description,features)
-
-setproductname("")
-                setcategory("");
-                setprice("");
-                setmrp("");
-                setstockqty("");
-                setimage("");
-                settagline("");
-                setdescription("");
-                setfeatures("");
-
-
-}
   return (
     <div className="container py-5 d-flex justify-content-center">
       <div

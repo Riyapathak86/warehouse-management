@@ -49,7 +49,7 @@ else{
   try {
 
     const res = await axios.post(
-      "http://localhost:3000/api/addtocart",
+    `${import.meta.env.VITE_API_URL}/api/addtocart`,
      {
     username,
     productId: item.id,

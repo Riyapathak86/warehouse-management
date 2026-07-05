@@ -13,21 +13,18 @@ const PainterDashboard = () => {
   const [siteName, setSiteName] = useState("");
   const [profit, setProfit] = useState("");
 
-  const getpainters = async () => {
-    try {
+const getpainters = async () => {
+  try {
+    const res = await axios.get(
+      `${import.meta.env.VITE_API_URL}/allpainters`
+    );
 
-      const res = await axios.get(
-        "http://localhost:3000/allpainters"
-      );
-  console.log("Updated Data:", res.data);
-
-      setpainterlist(res.data);
-
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
+    console.log("Updated Data:", res.data);
+    setpainterlist(res.data);
+  } catch (err) {
+    console.log(err);
+  }
+};
   useEffect(() => {
     getpainters();
   }, []);
@@ -37,7 +34,7 @@ const PainterDashboard = () => {
     try {
 
       await axios.post(
-        "http://localhost:3000/addpainter",
+      `${import.meta.env.VITE_API_URL}/addpainter`,
         {
           painter,
           value
@@ -68,7 +65,7 @@ const addSite = async () => {
     console.log(data);
 
     await axios.post(
-      "http://localhost:3000/addsite",
+    `${import.meta.env.VITE_API_URL}/addsite`,
       {
         painterId: selectedPainter.id,
         siteName,
