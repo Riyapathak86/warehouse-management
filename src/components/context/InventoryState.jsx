@@ -24,6 +24,11 @@ const [description, setdescription] = useState("");
 const [price, setprice] = useState("");
 const [features, setfeatures] = useState("");
 const [order, setorder] = useState("");
+const [painter, setpainter] = useState("");
+const [value,setvalue]= useState("")
+const [username, setUsername] = useState(
+  localStorage.getItem("username") || ""  
+);
   useEffect(() => {
     axios.get("http://localhost:3000/")
       .then(res => {
@@ -56,7 +61,10 @@ image, setimage,
 tagline, settagline,
 description, setdescription,
 features, setfeatures,
-order, setorder
+order, setorder,
+painter, setpainter,
+value,setvalue,
+username, setUsername
       }}
     >
       {children}

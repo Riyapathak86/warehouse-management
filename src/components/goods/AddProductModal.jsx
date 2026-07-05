@@ -6,4 +6,4 @@ const AddProductModal = () => {
   )
 }
 
-export default AddProductModal
+export default AddProductModal  

@@ -1,81 +1,164 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Context from "../context/Context";
 
 const Navbar = () => {
-  const { searchitem, setsearchitem } = useContext(Context);
+
+  const {
+    searchitem,
+    setsearchitem,
+    username,
+    setUsername
+  } = useContext(Context);
+
+  const navigate = useNavigate();
+const role = localStorage.getItem("role");
+  const handleLogout = () => {
+
+    localStorage.removeItem("username");
+    localStorage.removeItem("role");
+    localStorage.removeItem("token");
+
+    setUsername("");
+
+    navigate("/");
+
+  };
 
   return (
-    <>
-      {/* Navbar */}
-      <nav className="navbar px-3 fixed-top shadow-sm custom-navbar">
-        <div className="container-fluid d-flex justify-content-between align-items-center">
-          
-          {/* Left */}
-          <button
-            className="btn d-flex align-items-center gap-2 text-white"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasScrolling"
-          >
-            <i className="bi bi-list fs-4"></i>
-          </button>
 
-          <Link to="/" className="btn text-white fw-bold">
-                <img 
-    src="/logo.jpeg" 
-    alt="logo" 
-    width="80"
-    height="80"
-    className="rounded-circle"
-  />
-          </Link>
+    <nav className="navbar navbar.scrolled navbar-expand-lg fixed-top">
 
-          {/* Search */}
-          <div className="position-relative w-25">
-            <input
-              className="form-control rounded-pill ps-5 border-0 custom-search"
-              type="search"
-              placeholder="Find your products"
-              value={searchitem}
-              onChange={(e) => setsearchitem(e.target.value)}
-            />
+      <div className="container-fluid align-items-center">
+
+{
+
+
+role === "admin" && (
+  <button
+    className="btn text-white"
+    type="button"
+    data-bs-toggle="offcanvas"
+    data-bs-target="#offcanvasScrolling"
+  >
+    <i className="bi bi-list fs-3"></i>
+  </button>
+)}
+
+        {/* Logo */}
+        <Link to="/" className="navbar-brand ms-2">
+          <img
+            src="/logo.jpeg"
+            alt="logo"
+            width="60"
+            height="60"
+            className="rounded-circle"
+          />
+        </Link>
+
+        {/* Search */}
+        <div className="mx-auto" style={{ width: "350px" }}>
+          <input
+            className="form-control rounded-pill border-0 px-4"
+            type="search"
+            placeholder="Search paints..."
+            value={searchitem}
+            onChange={(e) => setsearchitem(e.target.value)}
+          />
         </div>
-<Link
-  className="text-decoration-none text-light"
-to="/aboutus">
-About us</Link>
-<Link
-  className="text-decoration-none text-light"
-to="/shop">
-shop</Link>
+
+        {/* Right Side */}
+        <div className="d-flex align-items-center gap-3">
+
+          {/* Navigation */}
           <Link
-            className="text-decoration-none text-light"
-            to="/AdminLogin"
+            className="text-decoration-none text-white fw-medium"
+            to="/aboutus"
           >
-      REGISTER/LOGIN
+            About
           </Link>
-        </div>
-      </nav>
 
-      {/* Full Width Video */}
-      {/* <div >
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          style={{
-            width: "120%",
-            height: "80vh",
-            objectFit: "cover",
-          }}
-        >
-          <source src="/heading.mp4" type="video/mp4" />
-        </video>
-      </div> */}
-    </>
+          <Link
+            className="text-decoration-none text-white fw-medium"
+            to="/shop"
+          >
+            Shop
+          </Link>
+
+          <Link
+            className="text-decoration-none text-white fw-medium"
+            to="/painter"
+          >
+            Painters
+          </Link>
+
+          <Link
+            className="text-decoration-none text-white fw-medium"
+            to="/rewards"
+          >
+            Rewards
+          </Link>
+
+          {username ? (
+            <>
+
+              {username === "admin" ? (
+
+                <Link
+                  to="/admindash"
+                  className="text-decoration-none d-flex flex-column align-items-center"
+                >
+                  <span
+                    className="text-white fw-bold"
+                    style={{ lineHeight: "16px" }}
+                  >
+                    Hi, {username}
+                  </span>
+
+                  <small
+                    className="text-warning"
+                    style={{ lineHeight: "14px" }}
+                  >
+                    Admin Panel
+                  </small>
+
+                </Link>
+
+              ) : (
+
+                <span className="text-white fw-bold">
+                  Hi, {username}
+                </span>
+
+              )}
+
+              <button
+                className="btn btn-danger rounded-pill px-4"
+                onClick={handleLogout}
+              >
+                Logout
+              </button>
+
+            </>
+          ) : (
+
+            <Link
+              className="btn btn-light rounded-pill px-4"
+              to="/AdminLogin"
+            >
+              Login
+            </Link>
+
+          )}
+
+        </div>
+
+      </div>
+
+    </nav>
+
   );
+
 };
 
 export default Navbar;

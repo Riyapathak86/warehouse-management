@@ -8,10 +8,16 @@ const PriceList = () => {
   const [search, setSearch] = useState("");
 
  
-  const filteredData = InventoryData.filter((item) =>
-    item.name.toLowerCase().includes(search.toLowerCase())
-  );
+  // const filteredData = InventoryData.filter((item) =>
+  //   item.name.toLowerCase().includes(search.toLowerCase())
+  // );
 
+const filteredData = (InventoryData || []).filter((item) =>
+  item.name.toLowerCase().includes(search.toLowerCase())
+);
+
+
+console.log("iD",InventoryData);
   return (
     <>
       <div className="d-flex justify-content-center mb-4">
@@ -21,19 +27,19 @@ const PriceList = () => {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           className="form-control"
-          style={{ border: "2px solid #0D9488", maxWidth: "300px" }}
+          style={{ border: "1px solid #2b0048", maxWidth: "300px" }}
         />
       </div>
 
 
-      <div className="container d-flex flex-wrap gap-4 justify-content-center">
+      <div className="container d-flex flex-wrap gap-4 justify-content-center theme">
 
         {filteredData.length > 0 ? (
 
           filteredData.map((item, index) => (
             <div
               className="card"
-              style={{ width: "15rem", border: "2px solid #0D9488" }}
+              style={{ width: "15rem", border: "1px solid #2b0048" }}
               key={index}
             >
 
@@ -51,7 +57,7 @@ const PriceList = () => {
                       width: "150px",
                       objectFit: "cover"
                     }}
-                  />
+                  /> 
 
                 </Link>
 

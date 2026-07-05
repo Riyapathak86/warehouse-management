@@ -12,9 +12,16 @@
   background: #0D9488;
 }
 .navbar {
-  background: #0D9488;  /* medium teal */
+  background: rgba(75, 0, 130, 0.25); /* purple transparent */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(4px);
   color: white;
+}
 
+.navbar.scrolled {
+  background: white;
+    color:black;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 .Adminpanel{  border:2px solid  #0D9488;
 font-family: 'Poppins', sans-serif;
@@ -23,3 +30,63 @@ font-family: 'Poppins', sans-serif;
 /* body {
   font-family: 'Poppins', sans-serif;
 } */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 1050;
+}
+
+/* .sidebar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(circle at 20% 20%, rgba(212,175,55,.25) 1px, transparent 2px),
+    radial-gradient(circle at 80% 40%, rgba(212,175,55,.2) 1px, transparent 2px),
+    radial-gradient(circle at 60% 80%, rgba(212,175,55,.25) 1px, transparent 2px);
+
+  pointer-events: none;
+} */
+
+.active-menu {
+  background: linear-gradient(
+    90deg,
+    #D4AF37,
+    #F5D76E
+  );
+
+  color: #2b0048 !important;
+  font-weight: 700;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 0 20px rgba(212,175,55,.4);
+}
+
+.sidebar .nav-link,
+.sidebar a {
+  transition: all 0.3s ease;
+}
+
+.sidebar a:hover {
+  transform: translateX(8px);
+  color: #F4C430 !important;
+}
+.theme{
+  color: #2b0048 !important;
+  border-color: #2b0048 !important;
+}
+.theme-colour{
+  color: #2b0048 !important;
+  border-color: #2b0048 !important;
+}
+
+.theme-colour:hover{
+  background-color: #2b0048 !important;
+  border-color: #2b0048 !important;
+  color: white !important;
+}

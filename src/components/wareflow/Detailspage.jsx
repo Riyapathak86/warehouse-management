@@ -91,10 +91,7 @@ const addToCart=()=>{
 
           <div className="mt-4 d-flex gap-3">
             <button className="btn btn-primary px-4"
-            
-            onClick={()=>{
-              addToCart(item)
-            }}
+
             >
               Add to Cart
             </button>

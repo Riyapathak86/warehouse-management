@@ -9,7 +9,8 @@ const LoginPage = () => {
     email,
     setemail,
     password,
-    setpassword
+    setpassword,
+      setUsername
   } = useContext(Context)
 
   const [msg, setmsg] = useState("")
@@ -37,9 +38,20 @@ const handleSubmit = async (e) => {
 
     // LOGIN SUCCESS
     if (res.data.success) {
+localStorage.setItem("username", res.data.user.name);
+localStorage.setItem("role", res.data.role);
+setUsername(res.data.user.name);
+     if (res.data.role === "admin") {
 
-      navigate("/");
+  navigate("/admindash");
 
+} else {
+
+  navigate("/");
+
+}
+console.log(res.data);
+console.log(res.data.success);
     }
 
   }
@@ -63,14 +75,14 @@ const handleSubmit = async (e) => {
 
     <div>
 
-      <div className="vh-100 vw-100 d-flex flex-column justify-content-center align-items-center mt-5">
+      <div className="vh-100 vw-100 d-flex flex-column justify-content-center align-items-center mt-5 ">
 
         <h3 className="mb-4 Adminpanelheading">
           Login Page
         </h3>
 
         <div
-          className="p-4 shadow rounded bg-light Adminpanel"
+          className="p-4 shadow rounded bg-light Adminpanel theme"
           style={{ width: "350px" }}
         >
 

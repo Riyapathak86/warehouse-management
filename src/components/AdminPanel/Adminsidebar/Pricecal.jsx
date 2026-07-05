@@ -8,9 +8,9 @@ const Pricecal = () => {
   const { id } = useParams();
   const { InventoryData } = useContext(Context); 
 
-  const product = InventoryData.find(
-    (item) => item.id === Number(id)
-  );
+ const product = (InventoryData || []).find(
+  (item) => item.id == id
+);
 
  
   if (!product) {
@@ -27,7 +27,7 @@ const Pricecal = () => {
   return (
 
     <div className="container mt-6 text-center bg-light rounded"
-      style={{ width: "20rem", border: "1px solid #0D9488" }}>
+      style={{ width: "20rem", border: "1px solid #2b0048" }}>
 
       <h4>{product.name}</h4>
 
@@ -48,7 +48,7 @@ const Pricecal = () => {
         style={{ maxWidth: "200px", margin: "auto" }}
       />
 
-      <h4 className="text-success">
+      <h4 className="text-success theme">
         After Discount: ₹{Math.max(finalPrice, 0)}
       </h4>
 

@@ -1,15 +1,17 @@
-import React from 'react'
+import React from "react";
 
 const AboutUs = () => {
   return (
-
-  <div className="w-100 overflow-hidden px-4 py-4">
-
+    <div
+      className="w-100 overflow-hidden px-4 py-4 mt-5"
+      style={{
+        background:
+          "linear-gradient(135deg,#2E0854,#4B0082,#6A0DAD)",
+        minHeight: "100vh",
+      }}
+    >
       {/* MAIN SECTION */}
-      <section
-        className="text-white py-5 sidebar"
-   
-      >
+      <section className="text-white py-5">
 
         <div className="container">
 
@@ -20,7 +22,7 @@ const AboutUs = () => {
               className="text-uppercase fw-bold"
               style={{
                 letterSpacing: "2px",
-                color: "#57e6d6"
+                color: "#FFD700",
               }}
             >
               Satkar Enterprises
@@ -41,7 +43,7 @@ const AboutUs = () => {
               className="mt-4 mx-auto"
               style={{
                 maxWidth: "850px",
-                color: "#dcdcdc",
+                color: "#EAEAEA",
                 fontSize: "1.1rem",
               }}
             >
@@ -54,16 +56,14 @@ const AboutUs = () => {
 
           </div>
 
-
-
           {/* SECTION 1 */}
           <div
-            className="row align-items-center mb-5 p-4 rounded-4 sidebar"
+            className="row align-items-center mb-5 p-4 rounded-4"
             style={{
-            //   background: "rgba(7, 77, 77, 0.55)",
+              background: "rgba(255,255,255,0.05)",
               backdropFilter: "blur(12px)",
-              border: "1px solid rgba(87,230,214,0.15)",
-              boxShadow: "0 8px 30px rgba(0,0,0,0.25)"
+              border: "1px solid rgba(255,215,0,0.25)",
+              boxShadow: "0 10px 30px rgba(0,0,0,0.35)",
             }}
           >
 
@@ -72,20 +72,23 @@ const AboutUs = () => {
               <img
                 src="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6"
                 alt="paint colours"
-                className="img-fluid rounded shadow"
+                className="img-fluid rounded-4 shadow-lg w-50"
               />
 
             </div>
 
             <div className="col-lg-6">
 
-              <h2 className="fw-bold mb-4">
+              <h2
+                className="fw-bold mb-4"
+                style={{ color: "#FFD700" }}
+              >
                 Premium Colour Collection
               </h2>
 
               <p
                 style={{
-                  color: "#dcdcdc",
+                  color: "#EAEAEA",
                   fontSize: "1.1rem",
                 }}
               >
@@ -96,18 +99,14 @@ const AboutUs = () => {
 
             </div>
 
-          </div>
-
-
-
-          {/* SECTION 2 */}
+          </div>          {/* SECTION 2 */}
           <div
-            className="row align-items-center flex-lg-row-reverse mb-5 p-4 rounded-4 sidebar"
+            className="row align-items-center flex-lg-row-reverse mb-5 p-4 rounded-4"
             style={{
-            //   background: "rgba(7, 77, 77, 0.55)",
+              background: "rgba(255,255,255,0.05)",
               backdropFilter: "blur(12px)",
-              border: "1px solid rgba(87,230,214,0.15)",
-              boxShadow: "0 8px 30px rgba(0,0,0,0.25)"
+              border: "1px solid rgba(255,215,0,0.25)",
+              boxShadow: "0 10px 30px rgba(0,0,0,0.35)",
             }}
           >
 
@@ -116,20 +115,23 @@ const AboutUs = () => {
               <img
                 src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85"
                 alt="paint range"
-                className="img-fluid rounded shadow"
+                className="img-fluid rounded-4 shadow-lg"
               />
 
             </div>
 
             <div className="col-lg-6">
 
-              <h2 className="fw-bold mb-4">
+              <h2
+                className="fw-bold mb-4"
+                style={{ color: "#FFD700" }}
+              >
                 Paints For Every Price Range
               </h2>
 
               <p
                 style={{
-                  color: "#dcdcdc",
+                  color: "#EAEAEA",
                   fontSize: "1.1rem",
                 }}
               >
@@ -141,16 +143,14 @@ const AboutUs = () => {
 
           </div>
 
-
-
           {/* SECTION 3 */}
           <div
-            className="row align-items-center mb-5 p-4 rounded-4 sidebar"
+            className="row align-items-center mb-5 p-4 rounded-4"
             style={{
-            //   background: "rgba(7, 77, 77, 0.55)",
+              background: "rgba(255,255,255,0.05)",
               backdropFilter: "blur(12px)",
-              border: "1px solid rgba(87,230,214,0.15)",
-              boxShadow: "0 8px 30px rgba(0,0,0,0.25)"
+              border: "1px solid rgba(255,215,0,0.25)",
+              boxShadow: "0 10px 30px rgba(0,0,0,0.35)",
             }}
           >
 
@@ -159,20 +159,23 @@ const AboutUs = () => {
               <img
                 src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85"
                 alt="inspection"
-                className="img-fluid rounded shadow"
+                className="img-fluid rounded-4 shadow-lg w-100"
               />
 
             </div>
 
             <div className="col-lg-6">
 
-              <h2 className="fw-bold mb-4">
+              <h2
+                className="fw-bold mb-4"
+                style={{ color: "#FFD700" }}
+              >
                 Free Site Inspection Service
               </h2>
 
               <p
                 style={{
-                  color: "#dcdcdc",
+                  color: "#EAEAEA",
                   fontSize: "1.1rem",
                 }}
               >
@@ -187,166 +190,146 @@ const AboutUs = () => {
 
       </section>
 
-
-
       {/* FOUNDER SECTION */}
- <section
-  className="py-5 text-white sidebar"
-//   style={{
-//     background:
-//       "linear-gradient(135deg,#0b3d3d,#145858,#1d7373)",
-//   }}
->
+      <section className="py-5 text-white">
 
-  <div className="container">
-
-    <div
-      className="p-5 rounded-4 text-center sidebar"
-      style={{
-        // background: "rgba(255,255,255,0.06)",
-        backdropFilter: "blur(12px)",
-        border: "1px solid rgba(87,230,214,0.15)",
-        boxShadow: "0 8px 30px rgba(0,0,0,0.25)"
-      }}
-    >
-
-      <h5
-        className="text-uppercase fw-bold mb-3"
-        style={{
-          color: "#57e6d6",
-          letterSpacing: "2px"
-        }}
-      >
-        Leadership Team
-      </h5>
-
-      <h1
-        className="fw-bold mb-4"
-        style={{
-          fontSize: "3.5rem",
-          lineHeight: "1.2"
-        }}
-      >
-        Meet The People Behind <br />
-        Satkar Enterprises
-      </h1>
-
-      <p
-        className="mx-auto"
-        style={{
-          maxWidth: "800px",
-          color: "#dcdcdc",
-          fontSize: "1.1rem"
-        }}
-      >
-        Satkar Enterprises proudly stands as a trusted name
-        in the paint industry, delivering premium Berger Paints
-        products, professional customer service, and expert paint
-        guidance for every type of project.
-      </p>
-
-      <div className="row mt-5">
-
-        {/* FOUNDER */}
-        <div className="col-md-6 mb-4">
+        <div className="container">
 
           <div
-            className="p-4 rounded-4 h-100 sidebar"
-            style={{
-            //   background: "rgba(255,255,255,0.05)",
-              border: "1px solid rgba(255,255,255,0.08)"
-            }}
-          >
-
-            <h2 className="fw-bold">
-              Palak Chawla
-            </h2>
-
-            <h5
-              className="mb-3"
-              style={{
-                color: "#57e6d6"
-              }}
-            >
-              Founder & Owner
-            </h5>
-
-            <p
-              style={{
-                color: "#dcdcdc",
-                fontSize: "1rem"
-              }}
-            >
-              Palak Chawla leads Satkar Enterprises with dedication,
-              professionalism, and a strong commitment to customer
-              satisfaction. Her vision and leadership have helped
-              the business become a trusted destination for premium
-              Berger Paints solutions and quality service.
-            </p>
-
-          </div>
-
-        </div>
-
-
-
-        {/* SALESMAN */}
-        <div className="col-md-6 mb-4 sidebar">
-
-          <div
-            className="p-4 rounded-4 h-100"
+            className="p-5 rounded-4 text-center"
             style={{
               background: "rgba(255,255,255,0.05)",
-              border: "1px solid rgba(255,255,255,0.08)"
+              backdropFilter: "blur(12px)",
+              border: "1px solid rgba(255,215,0,0.25)",
+              boxShadow: "0 10px 30px rgba(0,0,0,0.35)",
             }}
           >
 
-            <h2 className="fw-bold">
-              Md Talha
-            </h2>
-
             <h5
-              className="mb-3"
+              className="text-uppercase fw-bold mb-3"
               style={{
-                color: "#57e6d6"
+                color: "#FFD700",
+                letterSpacing: "2px",
               }}
             >
-              Salesman & Inspection Guide
+              Leadership Team
             </h5>
 
-            <p
+            <h1
+              className="fw-bold mb-4"
               style={{
-                color: "#dcdcdc",
-                fontSize: "1rem"
+                fontSize: "3.5rem",
+                lineHeight: "1.2",
               }}
             >
-              Md Talha provides expert product guidance,
-              free site inspection services, colour consultation,
-              and professional support to help customers select
-              the perfect Berger Paints products for their homes
-              and commercial spaces.
+              Meet The People Behind <br />
+              Satkar Enterprises
+            </h1>
+
+            <p
+              className="mx-auto"
+              style={{
+                maxWidth: "800px",
+                color: "#EAEAEA",
+                fontSize: "1.1rem",
+              }}
+            >
+              Satkar Enterprises proudly stands as a trusted name
+              in the paint industry, delivering premium Berger Paints
+              products, professional customer service, and expert paint
+              guidance for every type of project.
             </p>
+
+            <div className="row mt-5">
+
+              {/* FOUNDER */}
+              <div className="col-md-6 mb-4">
+
+                <div
+                  className="p-4 rounded-4 h-100"
+                  style={{
+                    background: "rgba(255,255,255,0.05)",
+                    border: "1px solid rgba(255,215,0,0.25)",
+                  }}
+                >
+
+                  <h2 className="fw-bold">
+                    Palak Chawla
+                  </h2>
+
+                  <h5
+                    className="mb-3"
+                    style={{ color: "#FFD700" }}
+                  >
+                    Founder & Owner
+                  </h5>
+
+                  <p
+                    style={{
+                      color: "#EAEAEA",
+                      fontSize: "1rem",
+                    }}
+                  >
+                    Palak Chawla leads Satkar Enterprises with dedication,
+                    professionalism, and a strong commitment to customer
+                    satisfaction.
+                  </p>
+
+                </div>
+
+              </div>
+
+              {/* SALESMAN */}
+              <div className="col-md-6 mb-4">
+
+                <div
+                  className="p-4 rounded-4 h-100"
+                  style={{
+                    background: "rgba(255,255,255,0.05)",
+                    border: "1px solid rgba(255,215,0,0.25)",
+                  }}
+                >
+
+                  <h2 className="fw-bold">
+                    Md Talha
+                  </h2>
+
+                  <h5
+                    className="mb-3"
+                    style={{ color: "#FFD700" }}
+                  >
+                    Salesman & Inspection Guide
+                  </h5>
+
+                  <p
+                    style={{
+                      color: "#EAEAEA",
+                      fontSize: "1rem",
+                    }}
+                  >
+                    Md Talha provides expert product guidance,
+                    free site inspection services, colour consultation,
+                    and professional support.
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
 
           </div>
 
         </div>
 
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
+      </section>
 
       {/* COLOUR SECTION */}
       <section
-        className="text-white d-flex align-items-center"
+        className="text-white d-flex align-items-center rounded-4"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(6,47,47,0.82),rgba(6,47,47,0.82)), url('https://images.unsplash.com/photo-1523413651479-597eb2da0ad6')",
+            "linear-gradient(rgba(46,8,84,0.88),rgba(75,0,130,0.88)), url('https://images.unsplash.com/photo-1523413651479-597eb2da0ad6')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           minHeight: "100vh",
@@ -376,10 +359,10 @@ const AboutUs = () => {
                 rel="noreferrer"
                 className="btn btn-lg px-5 py-3 mt-5 fw-bold"
                 style={{
-                  background: "#57e6d6",
-                  color: "#000",
+                  background: "#FFD700",
+                  color: "#2E0854",
                   border: "none",
-                  borderRadius: "50px"
+                  borderRadius: "50px",
                 }}
               >
                 Explore Now
@@ -394,7 +377,7 @@ const AboutUs = () => {
       </section>
 
     </div>
-  )
-}
+  );
+};
 
-export default AboutUs
+export default AboutUs;

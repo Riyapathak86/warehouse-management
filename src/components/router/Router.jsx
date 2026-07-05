@@ -10,7 +10,7 @@ import Orders from '../wareflow/Orders';
 import Navbar from "../layout/Navbar";
 import Sidebar from "../layout/Sidebar";
 import Detailspage from "../wareflow/Detailspage";
-
+import Rewards from "../Rewards";
 import AdminLogin from "../AdminPanel/AdminLogin";
 import AdminDashboard from "../AdminPanel/AdminDashboard";
 
@@ -22,6 +22,8 @@ import Pricecal from "../AdminPanel/Adminsidebar/Pricecal";
 import LoginPage from "../AdminPanel/LoginPage";
 import AboutUs from "../dashboard/AboutUs";
 import Shop from "../dashboard/Shop";
+import Painter from "../Painter";
+import Cart from "../wareflow/Cart";
 const Router = createBrowserRouter([
   {
     path: '/',
@@ -43,8 +45,9 @@ const Router = createBrowserRouter([
       {path:'aboutus',element:<AboutUs/>},
     {path:'loginpage',element: <LoginPage/>},
          {path:'shop',element:<Shop/>},
-    
-
+     {path:'painter',element:<Painter/>},
+{path:'rewards',element:<Rewards/>},
+     { path: 'cart', element: <Cart/> },
       {
         path: 'admindash',
         element: <AdminDashboard />,
@@ -52,12 +55,13 @@ const Router = createBrowserRouter([
           { path: 'painterDashboard', element: <PainterDashboard /> },
           { path: 'priceList', element: <PriceList /> },
 
-    
+   
           { path: 'pricecal/:id', element: <Pricecal /> },
 
           { path: 'reports', element: <Reports /> },
           { path: 'totalStock', element: <TotalStock /> },
           { path: 'orders', element: <Orders /> },
+       
             { path: 'addproduct', element: <AddProduct/> },
         ]
       }

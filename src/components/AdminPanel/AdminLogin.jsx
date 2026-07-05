@@ -25,12 +25,13 @@ import { useNavigate } from 'react-router';
   setname("");
   navigate("/loginpage")
   }
+   
     return (
       <div className="vh-100 vw-100 d-flex flex-column justify-content-center align-items-center mt-5">
         
         <h3 className=" mb-4  Adminpanelheading">Register page</h3>
 
-        <div className="p-4 shadow rounded bg-light  Adminpanel" style={{ width: "350px" }}>
+        <div className="p-4 shadow rounded bg-light " style={{ width: "350px", border:"2px solid #2b0048" }}>
           
 
             <div className="mb-3">
