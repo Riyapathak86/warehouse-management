@@ -1,97 +1,87 @@
- 🏬 Warehouse Management System
+# 🏬 Warehouse Management System
 
-A full-stack Warehouse Management System built with **React, Vite, Node.js, Express.js, PostgreSQL (Neon DB)** and deployed using **Vercel** (Frontend) and **Render** (Backend).
-
-## 🚀 Live Demo
-
-### Frontend
-https://warehouse-management-tf2m.vercel.app
-## 🔑 Demo Credentials
-
-> **Note:** The backend is hosted on Render's free tier. The first request may take **30–60 seconds** while the server wakes up.
-
-### 👨‍💼 Admin Login
-
-**Email**
-```text
-admin-admin@gmail.com
-```
-
-**Password**
-```text
-admin@123
-```
+A full-stack **Warehouse Management System** built with **React, Vite, Node.js, Express.js, PostgreSQL (Neon DB)** and deployed using **Vercel (Frontend)** and **Render (Backend)**.
 
 ---
 
-### 👤 User Login
+# 🚀 Live Demo
 
-**Email**
-```text
-rohit@gmail.com
-```
+### 🌐 Frontend
+https://warehouse-management-tf2m.vercel.app
 
-**Password**
-```text
-rohit@123
-```
-
-These demo accounts are provided for testing the application.
-### Backend API
+### ⚙️ Backend API
 https://warehouse-clmj.onrender.com
 
 ---
 
-## ✨ Features
+# 🔑 Demo Credentials
 
-### 👤 Authentication
+> **Note:** The backend is hosted on **Render Free Tier**. The first request may take **30–60 seconds** while the server wakes up.
+
+## 👨‍💼 Admin Login
+
+- **Email:** `admin-admin@gmail.com`
+- **Password:** `admin@123`
+
+## 👤 User Login
+
+- **Email:** `rohit@gmail.com`
+- **Password:** `rohit@123`
+
+These demo accounts are provided for testing the application.
+
+---
+
+# ✨ Features
+
+## 👤 Authentication
 - User Registration
 - User Login
 - Admin Login
-- Role-based Authentication
+- Role-Based Authentication
 - Logout Functionality
 
-### 📦 Inventory Management
+## 📦 Inventory Management
 - View Products
 - Search Products
 - Category Filtering
 - Product Details
-- Real-time Stock Display
+- Real-Time Stock Display
 
-### 🛒 Cart System
+## 🛒 Cart System
 - Add to Cart
 - Remove from Cart
 - View Cart
 - Place Orders
 
-### 📋 Orders
+## 📋 Orders
 - Order History
 - Order Management
 
-### 👨‍💼 Admin Dashboard
+## 👨‍💼 Admin Dashboard
 - Add New Product
-- View Total Stock
+- Total Stock Management
 - Product Price Calculator
 - Price List
 - Reports Dashboard
 - Painter Dashboard
 
-### 🎨 Painter Dashboard
+## 🎨 Painter Dashboard
 - Add Painters
 - Add Painter Sites
 - Track Painter Profit
 - Reward Management
 
-### 📊 Reports
+## 📊 Reports
 - Customer Reports
 - Inventory Reports
 - Stock Summary
 
 ---
 
-## 🛠 Tech Stack
+# 🛠 Tech Stack
 
-### Frontend
+## Frontend
 - React.js
 - Vite
 - React Router DOM
@@ -99,7 +89,7 @@ https://warehouse-clmj.onrender.com
 - Bootstrap
 - Bootstrap Icons
 
-### Backend
+## Backend
 - Node.js
 - Express.js
 - PostgreSQL
@@ -108,57 +98,62 @@ https://warehouse-clmj.onrender.com
 - CORS
 - dotenv
 
-### Deployment
+## Deployment
 - Frontend → Vercel
 - Backend → Render
-- Database → Neon
+- Database → Neon PostgreSQL
 
 ---
 
-## 📁 Project Structure
+# 📁 Project Structure
 
-```
-client/
+```text
+warehouse-management/
 │
 ├── public/
-├── src/
-│   ├── components/
-│   ├── context/
-│   ├── router/
-│   ├── layout/
-│   └── assets/
 │
 ├── server/
 │   ├── controllers/
-│   ├── routes/
-│   ├── middleware/
 │   ├── db/
-│   └── index.js
+│   ├── middleware/
+│   ├── routes/
+│   ├── index.js
+│   └── package.json
 │
-└── package.json
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── context/
+│   ├── layout/
+│   └── router/
+│
+├── .env
+├── package.json
+├── vite.config.js
+└── vercel.json
 ```
 
 ---
 
-## ⚙️ Installation
+# ⚙️ Installation
 
-### Clone Repository
+## Clone Repository
 
 ```bash
 git clone https://github.com/Riyapathak86/warehouse-management.git
 ```
 
-```
+```bash
 cd warehouse-management
 ```
 
-### Install Frontend
+## Install Frontend
 
 ```bash
 npm install
 ```
 
-### Install Backend
+## Install Backend
 
 ```bash
 cd server
@@ -167,7 +162,7 @@ npm install
 
 ---
 
-## ▶️ Run Frontend
+# ▶️ Run Frontend
 
 ```bash
 npm run dev
@@ -175,7 +170,7 @@ npm run dev
 
 ---
 
-## ▶️ Run Backend
+# ▶️ Run Backend
 
 ```bash
 node index.js
@@ -183,15 +178,15 @@ node index.js
 
 ---
 
-## 🔑 Environment Variables
+# 🔑 Environment Variables
 
-### Frontend (.env)
+## Frontend (.env)
 
 ```env
 VITE_API_URL=https://warehouse-clmj.onrender.com
 ```
 
-### Backend (.env)
+## Backend (.env)
 
 ```env
 DATABASE_URL=your_neon_database_url
@@ -199,37 +194,40 @@ DATABASE_URL=your_neon_database_url
 
 ---
 
-## 📸 Screenshots
+# 📸 Screenshots
 
-- Home Page
-- Inventory
-- Product Details
-- Cart
-- Orders
-- Admin Dashboard
-- Painter Dashboard
-- Reports
+- 🏠 Home Page
+- 📦 Inventory
+- 📄 Product Details
+- 🛒 Cart
+- 📋 Orders
+- 👨‍💼 Admin Dashboard
+- 🎨 Painter Dashboard
+- 📊 Reports
 
-(Add screenshots here)
+> *(Add screenshots of your application here.)*
 
 ---
 
-## 📌 Future Improvements
+# 📌 Future Improvements
 
 - JWT Authentication
-- Image Upload using Cloudinary
-- Email Notifications
+- Image Upload (Cloudinary)
+- Inventory Analytics Dashboard
 - Sales Dashboard
-- Inventory Analytics
-- Export Reports to PDF
+- Email Notifications
+- Export Reports to PDF & Excel
+- Responsive UI Improvements
+- Product Image Management
+- Low Stock Alerts
 - Dark Mode
-- Mobile Responsive Improvements
 
 ---
 
-## 👨‍💻 Author
+# 👨‍💻 Author
 
 **Riya Pathak**
 
-GitHub:
-https://github.com/Riyapathak8
+📧 Email: *(ruhiriya86@gmail.com)*
+
+🔗 GitHub: https://github.com/Riyapathak86
