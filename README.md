@@ -6,7 +6,37 @@ A full-stack Warehouse Management System built with **React, Vite, Node.js, Expr
 
 ### Frontend
 https://warehouse-management-tf2m.vercel.app
+## 🔑 Demo Credentials
 
+> **Note:** The backend is hosted on Render's free tier. The first request may take **30–60 seconds** while the server wakes up.
+
+### 👨‍💼 Admin Login
+
+**Email**
+```text
+admin-admin@gmail.com
+```
+
+**Password**
+```text
+admin@123
+```
+
+---
+
+### 👤 User Login
+
+**Email**
+```text
+rohit@gmail.com
+```
+
+**Password**
+```text
+rohit@123
+```
+
+These demo accounts are provided for testing the application.
 ### Backend API
 https://warehouse-clmj.onrender.com
 
